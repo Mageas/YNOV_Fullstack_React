@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Styled from './components/atoms/Styled';
+import { Container } from './components/atoms';
 
 function App() {
   return (
@@ -19,7 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
-      <Styled>Test</Styled>
+      <Container.Base>default</Container.Base>
+      <Container.Base bgColor="green">green</Container.Base>
     </div>
   );
 }
