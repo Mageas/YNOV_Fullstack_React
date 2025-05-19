@@ -1,20 +1,25 @@
 import './App.css';
-import { NightModeProvider } from './context/NightModeContext';
 import Bonjour from './components/molecules/Bonjour';
+import { ThemeProvider } from 'styled-components';
+
+const theme = {
+  light: {
+    color: '#000000',
+    background: '#FFFFFF',
+  },
+  dark: {
+    color: '#FFFFFF',
+    background: '#000000',
+  },
+};
 
 function App() {
   return (
     <div className="App">
-   {/* ThemeProvider theme={nightTheme}> */}
-      <NightModeProvider value={{
-        nightMode: "false",
-        getNightMode: () => {
-          return "night";
-        }
-      }}>
+      <ThemeProvider theme={theme.light}>
         <Bonjour>
         </Bonjour>
-      </NightModeProvider>
+      </ThemeProvider>
     </div>
   );
 }
