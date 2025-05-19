@@ -1,8 +1,9 @@
 import { styled } from 'styled-components'
 
-const Video = styled.video`
-    max-width: 100%;
-    height: auto;
+const Video = styled.iframe`
+    margin: auto;
+    width: 80vw;
+    height: 50rem;
     display: block;
 `;
 
