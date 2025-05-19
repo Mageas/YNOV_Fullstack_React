@@ -21,6 +21,7 @@ function App() {
       </header>
       <Container.Base>default</Container.Base>
       <Container.Base bgColor="green">green</Container.Base>
+      <Container.Padding>Padding</Container.Padding>
     </div>
   );
 }
