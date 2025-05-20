@@ -1,4 +1,5 @@
 import * as Bonjour from './Bonjour'
 import * as Button from './Button'
+import * as Menu from './Menu'
 
-export { Bonjour, Button };
+export { Bonjour, Button, Menu };
