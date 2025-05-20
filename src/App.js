@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Button, Menu } from './components/molecules';
 import { useState } from 'react';
 import { Home, Other } from './components/pages';
+import { NightModeProvider } from './context/NightModeContext';
 
 
 const theme = {
@@ -20,11 +21,18 @@ const theme = {
 function App() {
 
   const [userTheme, setUserTheme] = useState('light');
+  const [nightMode, setNightMode] = useState(false);
 
   return (
     <div className="App" style={{
       backgroundColor: userTheme === 'light' ? 'white' : 'black',
     }}>
+      {/* A voir comment faire fonctionner */}
+      <NightModeProvider value={{
+        nightMode: nightMode,
+        switchNightMode: () => setNightMode(!nightMode),
+      }}></NightModeProvider>
+
       <ThemeProvider theme={theme[userTheme]}>
         <Button.Default onClick={() => {
           setUserTheme(userTheme === 'light' ? 'dark' : 'light');
