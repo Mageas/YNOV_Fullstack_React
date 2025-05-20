@@ -2,7 +2,7 @@ import './App.css';
 import { Media, Typography } from './components/atoms';
 import { ThemeProvider } from 'styled-components';
 import { Button, Menu } from './components/molecules';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Home, Other } from './components/pages';
 import { NightModeProvider } from './context/NightModeContext';
 
@@ -19,6 +19,13 @@ const theme = {
 };
 
 function App() {
+
+  // useEffect(() => {
+  //   #ComponentDidMount();
+  //   return () => {
+  //      #ComponentDidUnmount();
+  //   }
+  // }, [#ComponentUpdated()]);
 
   const [userTheme, setUserTheme] = useState('light');
   const [nightMode, setNightMode] = useState(false);
