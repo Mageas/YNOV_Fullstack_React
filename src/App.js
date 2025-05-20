@@ -3,7 +3,7 @@ import { Media, Typography } from './components/atoms';
 import { ThemeProvider } from 'styled-components';
 import { Button, Menu } from './components/molecules';
 import { useEffect, useState } from 'react';
-import { Home, Other } from './components/pages';
+import { Home, Other, Todopage } from './components/pages';
 import { NightModeProvider } from './context/NightModeContext';
 
 
@@ -51,6 +51,7 @@ function App() {
           [
             <Home.Homepage />,
             <Other.CGU />,
+            <Todopage />,
           ]
         } />
       </ThemeProvider>

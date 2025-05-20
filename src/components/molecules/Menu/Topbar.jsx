@@ -9,6 +9,7 @@ const Topbar = ({pages, ...props}) => {
     <>
       <Button.Subscribe onClick={() => setSelectedMenu(0)}>Accueil</Button.Subscribe>
       <Button.Subscribe onClick={() => setSelectedMenu(1)}>CGU</Button.Subscribe>
+      <Button.Subscribe onClick={() => setSelectedMenu(2)}>TODO</Button.Subscribe>
       <Container.Base>
         {pages[selectedMenu]}
       </Container.Base>
